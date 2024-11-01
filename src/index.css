@@ -1,0 +1,157 @@
+:root {
+  --light-green: #F0FFF4;
+  --medium-green: #68D391;
+  --dark-green: #2F855A;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--light-green);
+  color: var(--dark-green);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--dark-green);
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-container {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  border: 1px solid var(--medium-green);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  background-color: var(--medium-green);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.add-button:hover {
+  background-color: var(--dark-green);
+}
+
+.lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.list-wrapper {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
+.list-total {
+  font-size: 1.1rem;
+  color: var(--dark-green);
+  font-weight: bold;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--light-green);
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-container, .lists-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .input, .add-button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .add-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .list-wrapper {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-container {
+    padding: 0.75rem;
+  }
+
+  .input, .add-button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .add-button {
+    padding: 0.5rem 1rem;
+  }
+
+  .list-wrapper {
+    padding: 0.8rem;
+  }
+}
